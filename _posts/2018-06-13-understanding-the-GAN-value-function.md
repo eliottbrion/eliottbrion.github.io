@@ -12,7 +12,7 @@ Despite my search on the web, I haven't found any explanation that is both simpl
 
 When training a GAN, we have samples $\{ (x_i, y_i) \}_ {i=1}^{2m} $ of images $x$ with their corresponding label ($y_i=1$ if $x_i$ has been drawn from $p_{data}$ and $y_i=0$ if $x_i$ has been drawn from $p_g$). Moreover, there are the same number of true and generated images ($m$ of each). Among all possible probability functions, we want to select the one that generated the samples that we observe with the highest probability
 
-$$D = \arg \max_D \prod_{i=1}^m P(y=y^{(i)} | x; D)$$
+$$D = \arg \max_D \prod_{i=1}^m P(y=y^{(i)} | x^{(i)}; D)$$
 
 This is the maximum likelihood estimator. Since there are only two possible labels (for all $i$, $y^{(i)}$ is equal to either 1 or 0), this can be written as
 
