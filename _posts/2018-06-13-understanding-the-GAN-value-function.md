@@ -4,13 +4,13 @@ title:  "Understanding the GAN value function"
 author: "Chester"
 ---
 
-I recently gained interest in Generative Adversarial Networks. Fascinated by both the theoritical idea and the various applications, I dove into the original paper of Goodfellow et al. My enthusiasm quickly calmed down as I got stuch at the first equation. This equation is supposed to describe the minimax problem that a GAN aims to solve:
+I recently gained interest in Generative Adversarial Networks. Fascinated by both the theoritical idea and the various applications, I dove into the original [paper](https://arxiv.org/abs/1406.2661) of Goodfellow et al. My enthusiasm quickly calmed down as I got stuck at the first equation. This equation is supposed to describe the minimax problem that a GAN aims to solve:
 
 $$ \min_G \max_D V(D,G) = \mathbb E_{x \sim p_{data}(x)} [\log D(x)] + \mathbb E _{z \sim p_z (z)} [ \log(1-D(G(z))]$$ 
 
 Despite my search on the web, I haven't found any explanation that is both simple and convincing. In this article, I propose to share how a few colleagues and I understand this equation now.
 
-When training a GAN, we have samples ${ (x_i, y_i) }_ {i=1}^{2m} $ of images $x$ with their corresponding label ($y_i=1$ if $x_i$ has been drawn from $p_{data}$ and $y_i=0$ if $x_i$ has been drawn from $p_g$). Moreover, there are the same number of true and generated images ($m$ of each). Among all possible probability functions $P(Y=y|x;D)$ parametrized by a function $D$, we want to select the one that generated the samples that we observe with the highest probability
+When training a GAN, we have samples $\{ (x_i, y_i) \}_ {i=1}^{2m} $ of images $x$ with their corresponding label ($y_i=1$ if $x_i$ has been drawn from $p_{data}$ and $y_i=0$ if $x_i$ has been drawn from $p_g$). Moreover, there are the same number of true and generated images ($m$ of each). Among all possible probability functions $P(Y=y|x;D)$ parametrized by a function $D$, we want to select the one that generated the samples that we observe with the highest probability
 
 $$D = \arg \max_D \prod_{i=1}^m P(y=y^{(i)} | x; D)$$
 
