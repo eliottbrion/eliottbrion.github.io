@@ -25,3 +25,7 @@ $$D = \arg \max_D \prod_{i:y^{(i)}=1} D(x^{(i)}) \prod_{i:y^{(i)}=0} 1- D(x^{(i)
 Now since the function $x \mapsto \log x$ is a monotonically increasing function, solving this problem is equivalent to solving this is equivalent to:
 
 $$D = \arg \max_D \log \left ( \prod_{i:y^{(i)}=1} D(x^{(i)}) \prod_{i:y^{(i)}=0} 1- D(x^{(i)}) \right )$$
+
+Writing the logarithm of the product as the sum of the logarithm yields
+
+$$D = \arg \max_D  \sum{i:y^{(i)}=1} \log D(x^{(i)}) \prod_{i:y^{(i)}=0} \log( 1- D(x^{(i)})) $$
