@@ -40,7 +40,7 @@ $$D = \arg \max_D \frac{1}{m} \sum_{i:y^{(i)}=1} \log D(x^{(i)}) + \frac{1}{m} \
 
 By the law of large numbers (LLN), $\frac{1}{m} \sum_{i=1}^m \log D(x^{(i)})$ gets arbitrarily close to $E_{x \sim p_{data}(x)} [\log D(x)]$ as $m$ increases to infinity (intuitively). We say that the left quantity *converges in probability* (weak version of the LLN) or *converges almost surely* (strong version of the LLN)
 
-$$\frac{1}{m} \sum_{i=1}^m \log D(x^{(i)}) \xrightarrow[\text{world}]{\text{hello}} E_{x \sim p_{data}(x)} [\log D(x)]$$
+$$\frac{1}{m} \sum_{i=1}^m \log D(x^{(i)}) \xrightarrow{\text{hello}} E_{x \sim p_{data}(x)} [\log D(x)]$$
 
 Similarly,
 
