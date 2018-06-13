@@ -48,11 +48,11 @@ $$ \frac{1}{m} \sum_{i=1}^m \log( 1- D(G(z^{(i)}))) \xrightarrow{\text{$m \right
 
 This means that the distriminator aims to maximize the log-likelihood with an infinte number of samples
 
-$$ D = \arg \max_D \mathbb E_{x \sim p_{data}(x)} [\log D(x)] + \mathbb E _{z \sim p_z (z)} [ \log(1-D(G(z))]$$
+$$ D = \arg \max_D \mathbb E_{x \sim p_{data}(x)} [\log D(x)] + \mathbb \mathbb{E} _{z \sim p_z (z)} [ \log(1-D(G(z))]$$
 
 The generator, on the contrary, aims at fooling the distriminator. In other words, $D$ and ^G^play the following two-player minimax game with value function $V(G,D)$
 
-$$ \min_G \max_D V(D,G) = \mathbb E_{x \sim p_{data}(x)} [\log D(x)] + \mathbb E _{z \sim p_z (z)} [ \log(1-D(G(z))] $$ 
+$$ \min_G \max_D V(D,G) = \mathbb E_{x \sim p_{data}(x)} [\log D(x)] + \mathbb \mathbb{E} _{z \sim p_z (z)} [ \log(1-D(G(z))] $$ 
 
 And we are done.
 
