@@ -14,7 +14,7 @@ When training a GAN, we have samples ${ (x_i, y_i) }_ {i=1}^{2m} $ of images $x$
 
 $$D = \arg \max_D \prod_{i=1}^m P(y=y^{(i)} | x; D)$$
 
-Since there are only two possible labels (for all $i$, $y^{(i)}$ is equal to either 1 or 0), this can be written as:
+This is the maximum likelihood estimator for $D^* $. Since there are only two possible labels (for all $i$, $y^{(i)}$ is equal to either 1 or 0), this can be written as:
 
 $$D = \arg \max_D \prod_{i:y^{(i)}=1} P(y=1 | x^{(i)}; D) \prod_{i:y^{(i)}=0} P(y=0 | x^{(i)})$$
 
