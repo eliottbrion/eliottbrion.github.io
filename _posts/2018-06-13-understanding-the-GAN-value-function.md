@@ -44,7 +44,7 @@ $$\frac{1}{m} \sum_{i=1}^m \log D(x^{(i)}) \xrightarrow{\text{$m \rightarrow \in
 
 Similarly,
 
-$$ \frac{1}{m} \sum_{i=1}^m \log( 1- D(G(z^{(i)}))) \xrightarrow{\text{$m \rightarrow \infty$}} \mathbb{E}_ {x \sim p_{data}(x)} [\log( 1- D(G(z)))]$$
+$$ \frac{1}{m} \sum_{i=1}^m \log( 1- D(G(z^{(i)}))) \xrightarrow{\text{$m \rightarrow \infty$}} \mathbb{E}_ {z \sim p_z(z)} [\log( 1- D(G(z)))]$$
 
 This means that the distriminator aims to maximize the log-likelihood with an infinte number of samples
 
