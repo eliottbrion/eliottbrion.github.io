@@ -20,5 +20,5 @@ $$D = \arg \max_D \prod_{i:y^{(i)}=1} P(y=1 | x^{(i)}; D) \prod_{i:y^{(i)}=0} P(
 
 By definition, any function $x \mapsto D(x)$ outputs the probability of $x$ being a "true" image rather than a generated one, i.e. $D(x)$ . Since an image is considered being either true or fake (there is no alternative), the probability $x$ being a "fake" image is $1-D(x)$. As a consequence,
 
-$$D = \arg \max_D \prod_{i:y^{(i)}=1} P(y=1 | x^{(i)}; D) \prod_{i:y^{(i)}=0} P(y=0 | x^{(i)})$$
+$$D = \arg \max_D \prod_{i:y^{(i)}=1} D(x^{(i)}) \prod_{i:y^{(i)}=0} 1- D(x^{(i)})$$
 
