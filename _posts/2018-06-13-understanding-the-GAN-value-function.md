@@ -22,3 +22,6 @@ By definition, any function $x \mapsto D(x)$ outputs the probability of $x$ bein
 
 $$D = \arg \max_D \prod_{i:y^{(i)}=1} D(x^{(i)}) \prod_{i:y^{(i)}=0} 1- D(x^{(i)})$$
 
+Now since the function $x \mapsto \log x$ is a monotonically increasing function, solving this problem is equivalent to solving this is equivalent to:
+
+$$D = \arg \max_D \log \left ( \prod_{i:y^{(i)}=1} D(x^{(i)}) \prod_{i:y^{(i)}=0} 1- D(x^{(i)}) \right )$$
