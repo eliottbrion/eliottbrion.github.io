@@ -1,8 +1,12 @@
 ---
 layout: default
 title:  "Understanding the GAN value function"
-author: "Chester"
+author: "Eliott Brion"
 ---
+
+# Understanding the GAN value function
+
+
 
 I recently gained interest in Generative Adversarial Networks (GANs). Fascinated by both the theoritical idea and the various applications, I dove into the original [paper](https://arxiv.org/abs/1406.2661) of Goodfellow et al. My enthusiasm quickly calmed down as I got stuck at the first equation. This equation is supposed to describe the minimax problem that a GAN aims to solve:
 
