@@ -14,7 +14,7 @@ When training a GAN, we have samples ${ (x_i, y_i) }_ {i=1}^{2m} $ of images $x$
 
 $$D = \arg \max_D \prod_{i=1}^m P(y=y^{(i)} | x; D)$$
 
-This is the maximum likelihood estimator for $D^* $. Since there are only two possible labels (for all $i$, $y^{(i)}$ is equal to either 1 or 0), this can be written as:
+This is the maximum likelihood estimator for $D^* $. Since there are only two possible labels (for all $i$, $y^{(i)}$ is equal to either 1 or 0), this can be written as
 
 $$D = \arg \max_D \prod_{i:y^{(i)}=1} P(y=1 | x^{(i)}; D) \prod_{i:y^{(i)}=0} P(y=0 | x^{(i)})$$
 
@@ -22,7 +22,7 @@ By definition, any function $x \mapsto D(x)$ outputs the probability of $x$ bein
 
 $$D = \arg \max_D \prod_{i:y^{(i)}=1} D(x^{(i)}) \prod_{i:y^{(i)}=0} 1- D(x^{(i)})$$
 
-Now since the function $x \mapsto \log x$ is a monotonically increasing function, solving this problem is equivalent to solving this is equivalent to:
+Now since the function $x \mapsto \log x$ is a monotonically increasing function, solving this problem is equivalent to solving this is equivalent to
 
 $$D = \arg \max_D \log \left ( \prod_{i:y^{(i)}=1} D(x^{(i)}) \prod_{i:y^{(i)}=0} 1- D(x^{(i)}) \right )$$
 
@@ -30,15 +30,15 @@ Writing the logarithm of the product as the sum of the logarithms yields
 
 $$D = \arg \max_D  \sum_{i:y^{(i)}=1} \log D(x^{(i)}) + \sum_{i:y^{(i)}=0} \log( 1- D(x^{(i)})) $$
 
-This expression does not change is we multiply the quantity to be maximize by a number. Here we chose $1/m$:
+This expression does not change is we multiply the quantity to be maximize by a number. Here we chose $1/m$
 
 $$D = \arg \max_D \frac{1}{m} \sum_{i:y^{(i)}=1} \log D(x^{(i)}) + \frac{1}{m} \sum_{i:y^{(i)}=0} \log( 1- D(x^{(i)})) $$
 
-For all generated images (the $x^{(i)}$ whose associated label is $y{(i)}$, there exists a $z^{(i)}$ that has been drawn from $G$ such that $x_i = G(z^{(i)})$:
+For all generated images (for all the $x^{(i)}$ whose associated label is $y^{(i)}$), there exists a $z^{(i)}$ that has been drawn from $G$ such that $x_i = G(z^{(i)})$
 
 $$D = \arg \max_D \frac{1}{m} \sum_{i:y^{(i)}=1} \log D(x^{(i)}) + \frac{1}{m} \sum_{i:y^{(i)}=0} \log( 1- D(G(z^{(i)}))) $$
 
-By the law of large numbers (LLN), $\frac{1}{m} \sum_{i=1}^m \log D(x^{(i)})$ gets arbitrarily close to $E_{x \sim p_{data}(x)} [\log D(x)]$ as $m$ increases to infinity (intuitively). We say that the left quantity converges in probability (weak version of the LLN) or almost surely (strong version of the LLN):
+By the law of large numbers (LLN), $\frac{1}{m} \sum_{i=1}^m \log D(x^{(i)})$ gets arbitrarily close to $E_{x \sim p_{data}(x)} [\log D(x)]$ as $m$ increases to infinity (intuitively). We say that the left quantity converges in probability (weak version of the LLN) or almost surely (strong version of the LLN)
 
 $$\frac{1}{m} \sum_{i=1}^m \log D(x^{(i)}) \rightarrow E_{x \sim p_{data}(x)} [\log D(x)]$$
 
@@ -46,13 +46,13 @@ Similarly,
 
 $$ E_{x \sim p_{data}(x)} [\log( 1- D(G(z^{(i)})))]$$
 
-This means that the distriminator aims to maximize is the log-likelihood with an infinity of samples:
+This means that the distriminator aims to maximize is the log-likelihood with an infinity of samples
 
 $$ D = \arg \max_D = E_{x \sim p_{data}(x)} [\log( 1- D(G(z^{(i)})))]$$
 
-The generator, on the contrary, aims to fool the distriminator. In other words, $D$ and ^G^play the following two-player minimax game with value function $V(G,D)$:
+The generator, on the contrary, aims to fool the distriminator. In other words, $D$ and ^G^play the following two-player minimax game with value function $V(G,D)$
 
-$$ \min_G \max_D V(D,G) = \mathbb E_{x \sim p_{data}(x)} [\log D(x)] + \mathbb E _{z \sim p_z (z)} [ \log(1-D(G(z))]$$ 
+$$ \min_G \max_D V(D,G) = \mathbb E_{x \sim p_{data}(x)} [\log D(x)] + \mathbb E _{z \sim p_z (z)} [ \log(1-D(G(z))] $$ 
 
 And we are done.
 
