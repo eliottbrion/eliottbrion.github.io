@@ -38,5 +38,26 @@ For all generated images (the $x^{(i)}$ whose associated label is $y{(i)}$, ther
 
 $$D = \arg \max_D \frac{1}{m} \sum_{i:y^{(i)}=1} \log D(x^{(i)}) + \frac{1}{m} \sum_{i:y^{(i)}=0} \log( 1- D(G(z^{(i)}))) $$
 
+By the law of large numbers (LLN), $\frac{1}{m} \sum_{i=1}^m \log D(x^{(i)})$ gets arbitrarily close to $E_{x \sim p_{data}(x)} [\log D(x)]$ as $m$ increases to infinity (intuitively). We say that the left quantity converges in probability (weak version of the LLN) or almost surely (strong version of the LLN):
+
+$$\frac{1}{m} \sum_{i=1}^m \log D(x^{(i)}) \rightarrow E_{x \sim p_{data}(x)} [\log D(x)]$$
+
+Similarly,
+
+$$ E_{x \sim p_{data}(x)} [\log( 1- D(G(z^{(i)})))]$$
+
+This means that the distriminator aims to maximize is the log-likelihood with an infinity of samples:
+
+$$ D = \arg \max_D = E_{x \sim p_{data}(x)} [\log( 1- D(G(z^{(i)})))]$$
+
+The generator, on the contrary, aims to fool the distriminator. In other words, $D$ and ^G^play the following two-player minimax game with value function $V(G,D)$:
+
+$$ \min_G \max_D V(D,G) = \mathbb E_{x \sim p_{data}(x)} [\log D(x)] + \mathbb E _{z \sim p_z (z)} [ \log(1-D(G(z))]$$ 
+
+And we are done.
+
+Hope that this helps you get started with the understanding of GANs ;)
+
+
 
 
