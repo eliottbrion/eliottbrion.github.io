@@ -29,3 +29,14 @@ $$D = \arg \max_D \log \left ( \prod_{i:y^{(i)}=1} D(x^{(i)}) \prod_{i:y^{(i)}=0
 Writing the logarithm of the product as the sum of the logarithm yields
 
 $$D = \arg \max_D  \sum_{i:y^{(i)}=1} \log D(x^{(i)}) + \sum_{i:y^{(i)}=0} \log( 1- D(x^{(i)})) $$
+
+This expression does not change is we multiply the quantity to be maximize by a number. Here we chose $1/m$:
+
+$$D = \arg \max_D \frac{1}{m} \sum_{i:y^{(i)}=1} \log D(x^{(i)}) + \frac{1}{m} \sum_{i:y^{(i)}=0} \log( 1- D(x^{(i)})) $$
+
+For all generated images (the $x^{(i)}$ whose associated label is $y{(i)}$, there exists a $z^{(i)}$ that has been drawn from $G$ such that $x_i = G(z^{(i)})$:
+
+$$D = \arg \max_D \frac{1}{m} \sum_{i:y^{(i)}=1} \log D(x^{(i)}) + \frac{1}{m} \sum_{i:y^{(i)}=0} \log( 1- D((z^{(i)}))) $$
+
+
+
