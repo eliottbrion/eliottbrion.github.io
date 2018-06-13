@@ -4,21 +4,8 @@ title:  "Introducing Tale"
 author: "Chester"
 ---
 
-Eliott is a minimal [Jekyll](https://jekyllrb.com/) theme curated for storytellers. It is designed and developed by [myself](https://github.com/chesterhow/) for a friend who writes short stories.
+I recently gained interest for Generative Adversarial Networks. Fascinated by both the theoritical idea and the various applications, I began the lecture of the orginal paper of Goodfellow et al., before being stuck in the first equation. This equation describes the minimax problem that a GAN solves:
 
-## Tale features
-- Compatible with GitHub Pages
-- Responsive design (looks just as good on mobile)
-- Syntax highlighting, with the help of Pygments
-- Markdown and HTML text formatting
-- Pagination of posts
-
-Head over to the [Example Content]({{ site.baseurl }}/2017-03-16/example-content) post for a showcase of Tale's text formatting features.
-
-## Browser Support
-Tale works on most if not all modern browsers, including Chrome, Safari and Firefox 👍🏼
-
-## Download or Contribute
-Tale is publicly hosted on GitHub, so go ahead and download or fork it at the [GitHub repository](https://github.com/chesterhow/tale). If you spot any bugs or have any suggestions, feel free to create an issue or make a pull request.
+$$ \min_G \max_D V(D,G) = E_{x \sim p_{data}(x) [\log D(x)]$$ 
 
 Thanks for checking out Tale!
