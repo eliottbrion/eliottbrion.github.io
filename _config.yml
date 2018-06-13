@@ -6,9 +6,8 @@ url:            "https://chesterhow.github.io"
 
 # Author
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name:         Eliott Brion
+  email:        eliott.brion@uclouvain.be
 
 # Build settings
 markdown:       kramdown
