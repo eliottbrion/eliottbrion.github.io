@@ -46,7 +46,7 @@ Similarly,
 
 $$ \frac{1}{m} \sum_{i=1}^m \log( 1- D(G(z^{(i)}))) \xrightarrow{\text{$m \rightarrow \infty$}} \mathbb{E}_ {z \sim p_z(z)} [\log( 1- D(G(z)))]$$
 
-This means that the distriminator aims to maximize the log-likelihood with an infinte number of samples
+This means that the distriminator aims to maximize the log-likelihood with an infinite number of samples
 
 $$ D = \arg \max_D \mathbb E_{x \sim p_{data}(x)} [\log D(x)] +  \mathbb{E} _{z \sim p_z (z)} [ \log(1-D(G(z))]$$
 
