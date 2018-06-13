@@ -34,7 +34,7 @@ This expression does not change is we multiply the quantity to be maximized by a
 
 $$D = \arg \max_D \frac{1}{m} \sum_{i:y^{(i)}=1} \log D(x^{(i)}) + \frac{1}{m} \sum_{i:y^{(i)}=0} \log( 1- D(x^{(i)})) $$
 
-For all generated images (for all the $x^{(i)}$ whose associated label is $y^{(i)}$), there exists a $z^{(i)}$ that has been drawn from $G$ such that $x_i = G(z^{(i)})$
+For all generated images (for all $x^{(i)}$ such that $y^{(i)}=0$), there exists a $z^{(i)}$ that has been drawn from $p_z$ such that $x_i = G(z^{(i)})$
 
 $$D = \arg \max_D \frac{1}{m} \sum_{i:y^{(i)}=1} \log D(x^{(i)}) + \frac{1}{m} \sum_{i:y^{(i)}=0} \log( 1- D(G(z^{(i)}))) $$
 
