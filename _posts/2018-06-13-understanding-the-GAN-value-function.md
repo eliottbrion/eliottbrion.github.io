@@ -26,7 +26,7 @@ Now since the function $x \mapsto \log x$ is a monotonically increasing function
 
 $$D = \arg \max_D \log \left ( \prod_{i:y^{(i)}=1} D(x^{(i)}) \prod_{i:y^{(i)}=0} 1- D(x^{(i)}) \right )$$
 
-Writing the logarithm of the product as the sum of the logarithm yields
+Writing the logarithm of the product as the sum of the logarithms yields
 
 $$D = \arg \max_D  \sum_{i:y^{(i)}=1} \log D(x^{(i)}) + \sum_{i:y^{(i)}=0} \log( 1- D(x^{(i)})) $$
 
