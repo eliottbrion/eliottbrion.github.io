@@ -30,7 +30,7 @@ Writing the logarithm of the product as the sum of the logarithms yields
 
 $$D = \arg \max_D  \sum_{i:y^{(i)}=1} \log D(x^{(i)}) + \sum_{i:y^{(i)}=0} \log( 1- D(x^{(i)})) $$
 
-This expression does not change is we multiply the quantity to be maximize by a number. Here we chose $1/m$
+This expression does not change is we multiply the quantity to be maximized by any arbitrary number. Let's choose $1/m$
 
 $$D = \arg \max_D \frac{1}{m} \sum_{i:y^{(i)}=1} \log D(x^{(i)}) + \frac{1}{m} \sum_{i:y^{(i)}=0} \log( 1- D(x^{(i)})) $$
 
@@ -50,7 +50,7 @@ This means that the distriminator aims to maximize is the log-likelihood with an
 
 $$ D = \arg \max_D = E_{x \sim p_{data}(x)} [\log( 1- D(G(z^{(i)})))]$$
 
-The generator, on the contrary, aims to fool the distriminator. In other words, $D$ and ^G^play the following two-player minimax game with value function $V(G,D)$
+The generator, on the contrary, aims at fooling the distriminator. In other words, $D$ and ^G^play the following two-player minimax game with value function $V(G,D)$
 
 $$ \min_G \max_D V(D,G) = \mathbb E_{x \sim p_{data}(x)} [\log D(x)] + \mathbb E _{z \sim p_z (z)} [ \log(1-D(G(z))] $$ 
 
