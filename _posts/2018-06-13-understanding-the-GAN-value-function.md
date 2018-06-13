@@ -16,9 +16,9 @@ $$D = \arg \max_D \prod_{i=1}^m P(y=y^{(i)} | x; D)$$
 
 This is the maximum likelihood estimator for $D^* $. Since there are only two possible labels (for all $i$, $y^{(i)}$ is equal to either 1 or 0), this can be written as
 
-$$D = \arg \max_D \prod_{i:y^{(i)}=1} P(y=1 | x^{(i)}; D) \prod_{i:y^{(i)}=0} P(y=0 | x^{(i)})$$
+$$D = \arg \max_D \prod_{i:y^{(i)}=1} P(y=1 | x^{(i)}; D) \prod_{i:y^{(i)}=0} P(y=0 | x^{(i)};D)$$
 
-By definition, any function $x \mapsto D(x)$ outputs the probability of $x$ being a "true" image rather than a generated one. Since an image is considered being either true or fake (there is no alternative), the probability $x$ being a "fake" image is $1-D(x)$. As a consequence,
+By definition, any function $x \mapsto D(x)$ outputs the probability of $x$ being a "true" image. Since an image is considered being either true or fake (there is no alternative), the probability $x$ being a "fake" image is $1-D(x)$. As a consequence,
 
 $$D = \arg \max_D \prod_{i:y^{(i)}=1} D(x^{(i)}) \prod_{i:y^{(i)}=0} 1- D(x^{(i)})$$
 
