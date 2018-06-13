@@ -1,7 +1,7 @@
 # Site settings
 title:          Eliott Brion Blog
 description:    "Eliott Brion Blog"
-baseurl:        "/eliottbrion.github.io"
+#baseurl:        "/eliottbrion.github.io"
 url:            "https://chesterhow.github.io"
 
 # Author
