@@ -10,7 +10,7 @@ $$ \min_G \max_D V(D,G) = \mathbb E_{x \sim p_{data}(x)} [\log D(x)] + \mathbb E
 
 Despite my search on the web, I haven't found any explanation that is both simple and convincing. In this article, I propose to share how a few colleagues and I understand this equation now.
 
-When training a GAN, we have samples $\{ (x_i, y_i) \}_ {i=1}^{2m} $ of images $x$ with their corresponding label ($y_i=1$ if $x_i$ has been drawn from $p_{data}$ and $y_i=0$ if $x_i$ has been drawn from $p_g$). Moreover, there are the same number of true and generated images ($m$ of each). Among all possible probability functions, we want to select the one that has the highest probability of having generated the label that we observe
+When training a GAN, we have samples $\{ (x_i, y_i) \}_ {i=1}^{2m} $ of images $x$ with their corresponding label ($y_i=1$ if $x_i$ has been drawn from $p_{data}$ and $y_i=0$ if $x_i$ has been drawn from $p_g$). Moreover, there are the same number of true and generated images ($m$ of each). Among all possible probability functions, we want to select the one that has the highest probability of having generated the labels that we observe
 
 $$D = \arg \max_D \prod_{i=1}^m P(y=y^{(i)} | x^{(i)}; D)$$
 
