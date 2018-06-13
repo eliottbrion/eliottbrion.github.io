@@ -2,6 +2,7 @@
 layout: post
 title: "About"
 author: "Chester"
+comments: true
 permalink: eliottbrion.github.io/about/
 ---
 
