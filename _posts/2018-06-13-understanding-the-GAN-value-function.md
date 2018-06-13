@@ -6,7 +6,7 @@ author: "Chester"
 
 I recently gained interest in Generative Adversarial Networks. Fascinated by both the theoritical idea and the various applications, I began the lecture of the orginal paper of Goodfellow et al. My enthusiasm came down as I got stuch at the first equation. This equation describes the minimax problem that a GAN aims to solve:
 
-$$ \min_G \max_D V(D,G) = \mathbb E_{\bf{x} \sim p_{data}(x)} [\log D(x)] + \mathbb E _{z \sim p_z (z)} [ \log(1-D(G(z))]$$ 
+$$ \min_G \max_D V(D,G) = \mathbb E_{x \sim p_{data}(x)} [\log D(x)] + \mathbb E _{z \sim p_z (z)} [ \log(1-D(G(z))]$$ 
 
 Despite my search on the web, I haven't found an explanation both convicing and simple. In this article, I propose to share an explanation that I finally found.
 
