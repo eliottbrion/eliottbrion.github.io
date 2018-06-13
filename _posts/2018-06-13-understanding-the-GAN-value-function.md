@@ -28,4 +28,4 @@ $$D = \arg \max_D \log \left ( \prod_{i:y^{(i)}=1} D(x^{(i)}) \prod_{i:y^{(i)}=0
 
 Writing the logarithm of the product as the sum of the logarithm yields
 
-$$D = \arg \max_D  \sum{i:y^{(i)}=1} \log D(x^{(i)}) + \sum_{i:y^{(i)}=0} \log( 1- D(x^{(i)})) $$
+$$D = \arg \max_D  \sum_{i:y^{(i)}=1} \log D(x^{(i)}) + \sum_{i:y^{(i)}=0} \log( 1- D(x^{(i)})) $$
