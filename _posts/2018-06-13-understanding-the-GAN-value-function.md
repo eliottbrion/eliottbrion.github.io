@@ -4,7 +4,7 @@ title:  "Understanding the GAN value function"
 author: "Chester"
 ---
 
-I recently gained interest in Generative Adversarial Networks. Fascinated by both the theoritical idea and the various applications, I began reading the orginal paper of Goodfellow et al. My enthusiasm quickly calmed down as I got stuch at the first equation. This equation describes the minimax problem that a GAN aims to solve:
+I recently gained interest in Generative Adversarial Networks. Fascinated by both the theoritical idea and the various applications, I dove into the orginal paper of Goodfellow et al. My enthusiasm quickly calmed down as I got stuch at the first equation. This equation is suppose to describe the minimax problem that a GAN aims to solve:
 
 $$ \min_G \max_D V(D,G) = \mathbb E_{x \sim p_{data}(x)} [\log D(x)] + \mathbb E _{z \sim p_z (z)} [ \log(1-D(G(z))]$$ 
 
