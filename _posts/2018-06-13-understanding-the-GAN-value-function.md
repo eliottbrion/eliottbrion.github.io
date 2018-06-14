@@ -16,7 +16,7 @@ Despite my search on the web, I haven't found any explanation that is both simpl
 
 ![alt text](https://github.com/eliottbrion/eliottbrion.github.io/blob/master/assets/GAN.PNG)
 
-Intuitively, the goal of a GAN is to artificially generate images that resemble real-life images. Mathematically, we will define $p_{data}$ as the probability distribution of all the real-life images. Think of a robot that would travel the world and take photos randomly everywhere it goes. The process of taking all these photos randomly from the real world can be described by a distribution $p_{data}$. The goal of a GAN is to determine a distribution $p_g$ close to $p_{data}$, without having a robot traveling the world to take random photos of it. The image generator is $G$ (a neural network). It takes as input a sample from a noise distribution $p_z$ and returns an image $x=G(z)$ (i.e., $x ~\sim p_g$) that are real-life like. A second neural network $D$ takes as input both real images $x \sim p_{data}$ and fake images $x ~ p_g$ and is trained to distinguish between the two. If $Y$ is a random variable taking the value 1 if the image is real and 0 if the image is fake, the discriminator takes an image $x$ and outputs 
+Intuitively, the goal of a GAN is to artificially generate images that resemble real-life images. Mathematically, we will define $p_{data}$ as the probability distribution of all the real-life images. Think of a robot that would travel the world and take photos randomly everywhere it goes. The process of taking all these photos randomly from the real world can be described by a distribution $p_{data}$. The goal of a GAN is to determine a distribution $p_g$ close to $p_{data}$, without having a robot traveling the world to take random photos of it. The image generator is $G$ (a neural network). It takes as input a sample from a noise distribution $p_z$ and returns an image $x=G(z)$ (i.e., $x ~\sim p_g$) that are real-life like. A second neural network $D$ takes as input both real images $x \sim p_{data}$ and fake images $x \sim p_g$ and is trained to distinguish between the two. If $Y$ is a random variable taking the value 1 if the image is real and 0 if the image is fake, the discriminator takes an image $x$ and outputs 
 
 $$D(x)=P(Y=1 | x) $$
 
@@ -32,7 +32,7 @@ By definition, any function $x \mapsto D(x)$ outputs the probability of $x$ bein
 
 $$D = \arg \max_D \prod_{i:y^{(i)}=1} D(x^{(i)}) \prod_{i:y^{(i)}=0} 1- D(x^{(i)})$$
 
-Now since the function $x \mapsto \log x$ is a monotonically increasing function, solving this problem is equivalent to solving this is equivalent to
+Now since the function $x \mapsto \log x$ is a monotonically increasing function, solving this problem is equivalent to 
 
 $$D = \arg \max_D \log \left ( \prod_{i:y^{(i)}=1} D(x^{(i)}) \prod_{i:y^{(i)}=0} 1- D(x^{(i)}) \right )$$
 
