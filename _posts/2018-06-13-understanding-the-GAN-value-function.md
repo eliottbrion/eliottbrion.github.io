@@ -14,7 +14,7 @@ $$ \min_G \max_D V(D,G) = \mathbb E_{x \sim p_{data}(x)} [\log D(x)] + \mathbb E
 
 Despite my search on the web, I haven't found any explanation that is both simple and convincing. In this article, I propose to share how a few colleagues and I understand this equation now.
 
-![Placeholder image](https://github.com/eliottbrion/eliottbrion.github.io/blob/master/assets/GAN.PNG "Placeholder image")
+![Placeholder image](https://drive.google.com/file/d/1c3phTEhfnJBznYvOTTJommi8O_U93dqP/view?usp=sharing "Placeholder image")
 
 Intuitively, the goal of a GAN is to artificially generate images that resemble real-life images. Mathematically, we will define $p_{data}$ as the probability distribution of all the real-life images. Think of a robot that would travel the world and take photos randomly everywhere it goes. The process of taking all these photos randomly from the real world can be described by a distribution $p_{data}$. The goal of a GAN is to determine a distribution $p_g$ close to $p_{data}$, without having a robot traveling the world to take random photos of it. The image generator is $G$ (a neural network). It takes as input a sample from a noise distribution $p_z$ and returns an image $x=G(z)$ (i.e., $x ~\sim p_g$) that are real-life like. A second neural network $D$ takes as input both real images $x \sim p_{data}$ and fake images $x \sim p_g$ and is trained to distinguish between the two. If $Y$ is a random variable taking the value 1 if the image is real and 0 if the image is fake, the discriminator takes an image $x$ and outputs 
 
