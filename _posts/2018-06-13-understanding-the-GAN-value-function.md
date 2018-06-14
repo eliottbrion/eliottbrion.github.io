@@ -1,10 +1,10 @@
 ---
 layout: default
-title:  "Understanding the GAN value function"
+title:  "Understanding the GAN cost function"
 author: "Eliott Brion"
 ---
 
-# Understanding the GAN value function
+# Understanding the GAN cost function
 
 
 
