@@ -40,7 +40,7 @@ Writing the logarithm of the product as the sum of the logarithms yields
 
 $$D = \arg \max_D  \sum_{i:y^{(i)}=1} \log D(x^{(i)}) + \sum_{i:y^{(i)}=0} \log( 1- D(x^{(i)})) $$
 
-This expression does not change is we multiply the quantity to be maximized by any arbitrary number. Let's choose $1/m$
+If $D$ maximizes a cost function $f$ if and only if it also maximizes $\alpha f$ for any arbitrary $\alpha>0$. Let's choose $\alpha=1/m$
 
 $$D = \arg \max_D \frac{1}{m} \sum_{i:y^{(i)}=1} \log D(x^{(i)}) + \frac{1}{m} \sum_{i:y^{(i)}=0} \log( 1- D(x^{(i)})) $$
 
